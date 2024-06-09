@@ -1,0 +1,64 @@
+/* ? что такое css селектор? какие бывают? */
+
+/* *Селектор - определяет, к какому элементу применять то или иное CSS-правило.*/
+
+/* *делятся на простые и составные*/
+
+/*Simple selectors*/
+
+.class {
+}
+#id {
+}
+p {
+}
+* {
+}
+a[href="test"] {
+}
+
+/* complex selectors */
+
+h1,
+h2,
+h3 {
+}
+div p {
+} /* потомок */
+li > a {
+} /* дочерний эл-т*/
+a:hover {
+}
+li:nth-last-child(2n) {
+}
+
+/** Вендорные префиксы */
+.class {
+  -webkit-opacity: 0.5; /* Chrome, Safari  */
+  -moz-property: 0.5; /*  Firefox  */
+  -ms-property: 0.5; /* Explorer & edge  */
+  -o-property: 0.5; /* Opera  */
+  property: 0.5;
+}
+
+/** Псевдоэлементы */
+/* Первый символ */
+h3::first-letter {
+  color: red;
+}
+/* первая строка */
+h3::first-line {
+  font-size: 30;
+}
+/* вставка контента до элемента */
+h3::before {
+  content: "aaaa";
+}
+/* вставка контента после элемента */
+h3::after {
+  content: "aaaa";
+}
+/* стили для выделения */
+h3::selection {
+  content: "aaaa";
+}
